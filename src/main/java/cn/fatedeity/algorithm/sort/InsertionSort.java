@@ -1,4 +1,4 @@
-package cn.fatedeity.sort;
+package cn.fatedeity.algorithm.sort;
 
 /**
  * 插入排序算法
