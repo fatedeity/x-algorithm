@@ -24,6 +24,7 @@ public class QuickSort extends Sort {
             }
         }
         this.swap(numbers, low, --mid);
+        // 递归实现
         this.sort(numbers, low, mid - 1);
         this.sort(numbers, mid + 1, high);
         return numbers;
