@@ -1,10 +1,10 @@
 package cn.fatedeity.algorithm.sort;
 
 /**
- * 计数排序算法
+ * 计数排序类
  */
-public class CountSort {
-    public static int[] sort(int[] numbers) {
+public class CountSort extends Sort {
+    public int[] sort(int[] numbers) {
         if (numbers.length == 0) {
             return numbers;
         }

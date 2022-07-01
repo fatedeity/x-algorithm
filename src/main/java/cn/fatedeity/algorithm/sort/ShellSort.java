@@ -1,10 +1,10 @@
 package cn.fatedeity.algorithm.sort;
 
 /**
- * 希尔排序算法
+ * 希尔排序类
  */
-public class ShellSort {
-    public static int[] sort(int[] numbers) {
+public class ShellSort extends Sort {
+    public int[] sort(int[] numbers) {
         int length = numbers.length;
         // 通常增量序列进行二分对原序列拆分
         for (int gap = length >> 1; gap > 0; gap = gap >> 1) {

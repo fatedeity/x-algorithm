@@ -1,10 +1,10 @@
 package cn.fatedeity.algorithm.sort;
 
 /**
- * 归并排序算法
+ * 归并排序类
  */
-public class MergeSort {
-    private static void merge(int[] numbers, int low, int mid, int high) {
+public class MergeSort extends Sort {
+    private void merge(int[] numbers, int low, int mid, int high) {
         int i = low;
         int j = mid + 1;
         int[] newNumbers = new int[high - low + 1];
@@ -32,17 +32,17 @@ public class MergeSort {
         }
     }
 
-    private static int[] sort(int[] numbers, int low, int high) {
+    private int[] sort(int[] numbers, int low, int high) {
         if (low < high) {
             int mid = (low + high) >> 1;
-            sort(numbers, low, mid);
-            sort(numbers, mid + 1, high);
-            merge(numbers, low, mid, high);
+            this.sort(numbers, low, mid);
+            this.sort(numbers, mid + 1, high);
+            this.merge(numbers, low, mid, high);
         }
         return numbers;
     }
 
-    public static int[] sort(int[] numbers) {
-        return sort(numbers, 0, numbers.length - 1);
+    public int[] sort(int[] numbers) {
+        return this.sort(numbers, 0, numbers.length - 1);
     }
 }
