@@ -4,11 +4,12 @@ import java.util.List;
 import java.util.ArrayList;
 
 /**
- * 计数排序类
+ * 基数排序类
  */
-public class RadixSort extends Sort {
+public class RadixSort extends AbstractSort {
+    @Override
     public int[] sort(int[] numbers) {
-        if (numbers.length == 0) {
+        if (numbers.length <= 1) {
             return numbers;
         }
 

@@ -3,9 +3,10 @@ package cn.fatedeity.algorithm.sort;
 /**
  * 计数排序类
  */
-public class CountSort extends Sort {
+public class CountSort extends AbstractSort {
+    @Override
     public int[] sort(int[] numbers) {
-        if (numbers.length == 0) {
+        if (numbers.length <= 1) {
             return numbers;
         }
 

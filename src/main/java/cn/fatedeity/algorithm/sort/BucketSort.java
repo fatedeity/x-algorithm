@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * 桶排序类
  */
-public class BucketSort extends Sort {
+public class BucketSort extends AbstractSort {
     private void swap(List<Integer> numbers, int src, int target) {
         int temp = numbers.get(src);
         numbers.set(src, numbers.get(target));
@@ -24,8 +24,9 @@ public class BucketSort extends Sort {
         }
     }
 
+    @Override
     public int[] sort(int[] numbers) {
-        if (numbers.length == 0) {
+        if (numbers.length <= 1) {
             return numbers;
         }
 

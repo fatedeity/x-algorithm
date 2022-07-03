@@ -3,7 +3,7 @@ package cn.fatedeity.algorithm.sort;
 /**
  * 归并排序类
  */
-public class MergeSort extends Sort {
+public class MergeSort extends AbstractSort {
     private void merge(int[] numbers, int low, int mid, int high) {
         int i = low;
         int j = mid + 1;
@@ -42,7 +42,12 @@ public class MergeSort extends Sort {
         return numbers;
     }
 
+    @Override
     public int[] sort(int[] numbers) {
+        if (numbers.length <= 1) {
+            return numbers;
+        }
+
         return this.sort(numbers, 0, numbers.length - 1);
     }
 }

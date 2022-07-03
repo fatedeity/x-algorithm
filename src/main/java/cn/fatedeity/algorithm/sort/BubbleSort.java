@@ -3,8 +3,13 @@ package cn.fatedeity.algorithm.sort;
 /**
  * 冒泡排序类
  */
-public class BubbleSort extends Sort {
+public class BubbleSort extends AbstractSort {
+    @Override
     public int[] sort(int[] numbers) {
+        if (numbers.length <= 1) {
+            return numbers;
+        }
+
         for (int i = 0; i < numbers.length - 1; i++) {
             boolean doSwap = false;
             for (int j = 0; j + 1 < numbers.length - i; j++) {
