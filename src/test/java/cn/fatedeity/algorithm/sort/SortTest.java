@@ -6,45 +6,45 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class SortTest {
     private void testSort(Sort sortObj) {
-        // 有序序列
         assertArrayEquals(
                 new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
-                sortObj.sort(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10})
+                sortObj.sort(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}),
+                "有序序列"
         );
-        // 倒序序列
         assertArrayEquals(
                 new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
-                sortObj.sort(new int[]{10, 9, 8, 7, 6, 5, 4, 3, 2, 1})
+                sortObj.sort(new int[]{10, 9, 8, 7, 6, 5, 4, 3, 2, 1}),
+                "倒序序列"
         );
-        // 包含负数的有序序列
         assertArrayEquals(
                 new int[]{-10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
-                sortObj.sort(new int[]{-10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10})
+                sortObj.sort(new int[]{-10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}),
+                "有序坐标序列"
         );
-        // 包含负数的倒序序列
         assertArrayEquals(
                 new int[]{-10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
-                sortObj.sort(new int[]{10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0, -1, -2, -3, -4, -5, -6, -7, -8, -9, -10})
+                sortObj.sort(new int[]{10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0, -1, -2, -3, -4, -5, -6, -7, -8, -9, -10}),
+                "倒序坐标序列"
         );
-        // 不包含 0 包含负数的有序序列
         assertArrayEquals(
                 new int[]{-10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
-                sortObj.sort(new int[]{10, 9, 8, 7, 6, 5, 4, 3, 2, 1, -1, -2, -3, -4, -5, -6, -7, -8, -9, -10})
+                sortObj.sort(new int[]{10, 9, 8, 7, 6, 5, 4, 3, 2, 1, -1, -2, -3, -4, -5, -6, -7, -8, -9, -10}),
+                "不包含零的坐标序列"
         );
-        // 包含负数的随机序列
         assertArrayEquals(
                 new int[]{-10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 10},
-                sortObj.sort(new int[]{-5, 7, 4, -2, 6, 5, 8, 3, 2, -7, -1, 0, -3, 9, -6, -4, 10, 9, 1, -8, -9, -10})
+                sortObj.sort(new int[]{-5, 7, 4, -2, 6, 5, 8, 3, 2, -7, -1, 0, -3, 9, -6, -4, 10, 9, 1, -8, -9, -10}),
+                "包含负数的随机序列"
         );
-        // 单元素序列
         assertArrayEquals(
                 new int[]{1},
-                sortObj.sort(new int[]{1})
+                sortObj.sort(new int[]{1}),
+                "单元素序列"
         );
-        // 空序列
         assertArrayEquals(
                 new int[]{},
-                sortObj.sort(new int[]{})
+                sortObj.sort(new int[]{}),
+                "空序列"
         );
     }
 
