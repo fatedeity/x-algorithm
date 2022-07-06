@@ -14,34 +14,26 @@ class InterpolationSearchTest {
     }
 
     @Test
-    void sortArray() {
+    void search() {
         assertEquals(
                 8,
-                interpolationSearch.search(new int[]{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, 8)
+                interpolationSearch.search(new int[]{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, 8),
+                "有目标值的序列"
         );
-    }
-
-    @Test
-    void notFound() {
         assertEquals(
-                -1,
-                interpolationSearch.search(new int[]{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, 10)
+                8,
+                interpolationSearch.search(new int[]{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, 8),
+                "无目标值的序列"
         );
-    }
-
-    @Test
-    void oneElementArray() {
         assertEquals(
                 0,
-                interpolationSearch.search(new int[]{0}, 0)
+                interpolationSearch.search(new int[]{0}, 0),
+                "只有一个值的序列"
         );
-    }
-
-    @Test
-    void blankArray() {
         assertEquals(
                 -1,
-                interpolationSearch.search(new int[]{}, 0)
+                interpolationSearch.search(new int[]{}, 0),
+                "空序列"
         );
     }
 }
