@@ -28,7 +28,7 @@ class TwoSumTest {
         assertArrayEquals(
                 new int[]{0, 1},
                 this.twoSum.answer(new int[]{3, 3}, 6),
-                "题目示例 2"
+                "题目示例 3"
         );
     }
 }

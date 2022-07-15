@@ -2,6 +2,9 @@ package cn.fatedeity.algorithm.leetcode;
 
 import java.util.HashMap;
 
+/**
+ * 两数之和
+ */
 public class TwoSum {
     public int[] answer(int[] nums, int target) {
         HashMap<Integer, Integer> hashMap = new HashMap<>();
